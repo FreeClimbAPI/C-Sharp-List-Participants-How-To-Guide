@@ -1,4 +1,4 @@
-# C# - List Conference Participants Tutorial
+# C# - List Participants Tutorial
 
 This project serves as a guide to help you build an application with FreeClimb. View this tutorial on [FreeClimb.com](https://docs.freeclimb.com/docs/list-conference-participants#section-c). Specifically, the project will:
 

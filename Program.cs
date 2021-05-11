@@ -20,9 +20,9 @@ namespace ListConferenceParticipants {
 
     public static IList<Participant> GetConferenceParticipantsList (string conferenceId) {
       string acctId = getAcctId ();
-      string authToken = getAuthToken ();
+      string apiKey = getApiKey ();
       IList<Participant> ret = new List<Participant> ();
-      FreeClimbClient client = new FreeClimbClient (acctId, authToken);
+      FreeClimbClient client = new FreeClimbClient (acctId, apiKey);
       // the last two parameters are to filter on the participants talk and listen properties respectively
       ParticipantList participantList = client.getConferencesRequester.getParticipants (conferenceId);
       if (participantList.getTotalSize > 0) {
@@ -42,8 +42,8 @@ namespace ListConferenceParticipants {
     private static string getAcctId () {
       return System.Environment.GetEnvironmentVariable("ACCOUNT_ID");
     }
-    private static string getAuthToken () {
-      return System.Environment.GetEnvironmentVariable("AUTH_TOKEN");
+    private static string getApiKey () {
+      return System.Environment.GetEnvironmentVariable("API_KEY");
     }
   }
 }
